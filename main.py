@@ -17,9 +17,9 @@ def farmer(x,y):
 pygame.init()
 
 screen = pygame.display.set_mode([display_width, display_height])
-cowimg = pygame.image.load('cow3.png')
-grass = pygame.image.load('grass2.png')
-cloud = pygame.image.load('clouds.png')
+cowimg = pygame.image.load('venv/images/cow3.png')
+grass = pygame.image.load('venv/images/grass2.png')
+cloud = pygame.image.load('venv/images/clouds.png')
 joe = pygame.image.load('farmer joe.png')
 
 # Run until the user asks to quit
