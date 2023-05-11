@@ -10,7 +10,9 @@ def gra(x,y):
 
 def clo(x,y):
     screen.blit(cloud, (x,y))
-#DISPLAY=pygame.display.set_mode((display_width, display_height),0,32)
+    
+def farmer(x,y): 
+    screen.blit(joe, (x,y))
 
 pygame.init()
 
@@ -18,6 +20,7 @@ screen = pygame.display.set_mode([display_width, display_height])
 cowimg = pygame.image.load('cow3.png')
 grass = pygame.image.load('grass2.png')
 cloud = pygame.image.load('clouds.png')
+joe = pygame.image.load('farmer joe.png')
 
 # Run until the user asks to quit
 running = True
@@ -33,6 +36,7 @@ while running:
     cow(300, 400)
     gra(300, 580)
     clo(300, 0)
+    farmer(400, 400)
 
 
 
