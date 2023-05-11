@@ -1,13 +1,23 @@
 import pygame
 
-# Simple pygame program
+display_width = 1200
+display_height = 800
+def cow(x,y):
+    screen.blit(cowimg, (x,y))
 
-# Import and initialize the pygame library
-import pygame
+def gra(x,y):
+    screen.blit(grass, (x,y))
+
+def clo(x,y):
+    screen.blit(cloud, (x,y))
+#DISPLAY=pygame.display.set_mode((display_width, display_height),0,32)
+
 pygame.init()
 
-# Set up the drawing window
-screen = pygame.display.set_mode([500, 500])
+screen = pygame.display.set_mode([display_width, display_height])
+cowimg = pygame.image.load('cow3.png')
+grass = pygame.image.load('grass2.png')
+cloud = pygame.image.load('clouds.png')
 
 # Run until the user asks to quit
 running = True
@@ -19,13 +29,17 @@ while running:
             running = False
 
     # Fill the background with white
-    screen.fill((89, 140, 76))
+    screen.fill((135, 206, 235))
+    cow(300, 400)
+    gra(300, 580)
+    clo(300, 0)
+
+
+
+
 
     # Draw a solid blue circle in the center
-    surface = pygame.display.set_mode((400,300))
-    color = (0, 0, 0, 255)
-    pygame.draw.rect(surface, color, pygame.Rect(30, 30, 60, 60))
-    pygame.display.flip()
+    #pygame.draw.rect(DISPLAY,BLUE,(200,150,100,50))
 
     # Flip the display
     pygame.display.flip()
